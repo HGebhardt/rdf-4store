@@ -35,7 +35,7 @@ module RDF::FourStore
         @uri = uri_or_options.to_s
       when Hash
         @options = uri_or_options.dup
-        @uri = @options.delete([:uri])
+        @uri = @options.delete(:uri)
       else
         raise ArgumentError, "expected String or Hash, but got #{uri_or_options.inspect}"
       end
